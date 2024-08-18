@@ -36,7 +36,7 @@ bool cameraInit() {
   config.jpeg_quality = 12;  // JPEG品質を調整
   config.fb_count = 2;
   config.grab_mode = CAMERA_GRAB_LATEST;
-
+  config.fb_location = CAMERA_FB_IN_DRAM;
   while (true) {
     if (esp_camera_init(&config) != ESP_OK) {
       Serial.println("カメラの初期化に失敗しました");
